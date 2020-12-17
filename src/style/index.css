@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'fonts/fonts.css';
+
+.site-title {
+    font-family: 'SiteTitle', sans-serif;
+}
+
+body {
+    @apply bg-white text-black;
+}
+
+tbody tr:hover,
+tr:hover input {
+    @apply bg-white;
+}
+
+.btn {
+    @apply border border-white text-white font-bold py-2 px-4 rounded;
+}
+
+.sorta-gray {
+    filter: grayscale(0.6) contrast(1.2);
+}
+
+.burgermenu {
+    fill: white;
+}
+
+.generic-text {
+    @apply text-black font-bold uppercase;
+}
+
+.button {
+    @apply font-bold uppercase px-8 py-2 transition-colors duration-150 border-4 rounded-full text-black bg-yellow border-white shadow;
+}
+.button.positive {
+    @apply text-white border-white bg-positive;
+}
+.button.negative {
+    @apply text-white border-white bg-negative;
+}
+
+.button:hover {
+    @apply bg-white text-black border-yellow;
+}
+.button.positive:hover {
+    @apply bg-white text-positive border-positive;
+}
+.button.negative:hover {
+    @apply bg-white text-negative border-negative;
+}

@@ -1,0 +1,10 @@
+{
+    "css.validate": false,
+    "scss.validate": false,
+    "todo-tree.general.tags": [
+        "TODO",
+        "FIXME",
+        "CODESTYLE",
+        "CHORE"
+    ]
+}

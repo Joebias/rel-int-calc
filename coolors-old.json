@@ -1,0 +1,39 @@
+{
+    "colors": {
+        "black": "#070707",
+        "white": "#F0EFF4",
+        "secondary": {
+            "light": "#644f64",
+            "lighter": "#503b58",
+            "default": "#3D2645",
+            "darker": "#392241",
+            "dark": "#351e3d"
+        },
+        "primary": {
+            "light": "#b75392",
+            "lighter": "#AE4485",
+            "default": "#A53377",
+            "darker": "#9A2E6E",
+            "dark": "#8F2964"
+        },
+        "accent": {
+            "light": "#e15d81",
+            "lighter": "#de4f74",
+            "default": "#DA4167",
+            "darker": "#cb3b5d",
+            "dark": "#bc3452"
+        },
+        "error": {
+            "faded": "#722329",
+            "default": "#620D15",
+            "dark": "#590a11"
+        },
+        "grey": {
+            "light": "#e6e6e6",
+            "lighter": "#b3b3b3",
+            "default": "#808080",
+            "darker": "#4D4D4d",
+            "dark": "#1A1A1A"
+        }
+    }
+}
