@@ -3,7 +3,6 @@ import { useState } from 'react'
 import MobileNavMenu from './MobileNavMenu'
 import NavMenu from './NavMenu'
 import BurgerMenuButton from './BurgerMenuButton'
-import { useFirebaseAuth } from '../../../utils/auth/hooks'
 import { SITE_TITLE } from '../../../utils/constants'
 
 export type NavItem = { label: string; path: string }
@@ -11,8 +10,6 @@ export type NavItem = { label: string; path: string }
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false)
     const toggleMenuOpen = () => setMenuOpen(!menuOpen)
-
-    const { user, initializing } = useFirebaseAuth()
 
     const navLinks: NavItem[] = [
         {
@@ -45,13 +42,7 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className='right-nav self-center ml-auto flex flex-1 justify-center text-black font-bold uppercase'>
-                    <span className=''>
-                        {!initializing && (
-                            <Link href={`/${!!user ? 'user' : 'login'}`}>
-                                <a>{!!user ? 'Me' : 'Login'}</a>
-                            </Link>
-                        )}
-                    </span>
+                    <span className=''>Other</span>
                 </div>
             </div>
             <MobileNavMenu display={menuOpen} navlinks={navLinks} />

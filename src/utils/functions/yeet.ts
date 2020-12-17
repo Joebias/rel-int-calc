@@ -1,1 +1,4 @@
-export default (condition: boolean, result: string): string => (condition ? result : '')
+const yeet = (condition: boolean, result: string): string =>
+    condition ? result : ''
+
+export default yeet
