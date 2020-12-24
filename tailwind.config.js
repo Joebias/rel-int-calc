@@ -4,6 +4,39 @@
  * Black        #14000C
  */
 
+const colors = {
+    black: '#14000C',
+    white: { pure: 'white', DEFAULT: '#EEF0F2' }, // '#F0EFF4',
+    plumb: {
+        light: '#E0DEB8',
+        lighter: '#DAD7AA',
+        DEFAULT: '#D0cD94',
+        darker: '#C7C37F',
+        dark: '#C1BD71',
+    },
+    yellow: {
+        light: '#3f273e',
+        lighter: '#331f31',
+        DEFAULT: '#241623',
+        darker: '#291091',
+        dark: '#0d080c',
+    },
+    green: {
+        DEFAUT: '#2D4739',
+    },
+    grey: {
+        light: '#1a1f23',
+        DEFAULT: '#121619',
+        dark: '#090A0C',
+    },
+
+    white: '#FFFFFF',
+}
+
+const primary = colors.yellow
+const secondary = colors.plumb
+const background = colors.grey
+
 module.exports = {
     purge: ['./src/**/*.tsx', './src/**/*.jsx'],
     theme: {
@@ -14,21 +47,9 @@ module.exports = {
             },
         },
         colors: {
-            black: '#14000C',
-            white: { pure: 'white', DEFAULT: '#EEF0F2' }, // '#F0EFF4',
-            background: {
-                light: '#1A2260',
-                DEFAULT: '#131945',
-                darker: '#121740',
-                dark: '#0D1130',
-            },
-            yellow: {
-                light: '#F1D26A',
-                lighter: '#EFCC57',
-                DEFAULT: '#EEC643', // '#3993DD',
-                darker: '#EABB1F',
-                dark: '#E0B115',
-            },
+            background: background,
+            primary: primary,
+            secondary: secondary,
             positive: {
                 light: '#6fb668',
                 DEFAULT: '#5FAD56',
@@ -39,11 +60,7 @@ module.exports = {
                 DEFAULT: '#7D2638',
                 dark: '#5e1d2a',
             },
-            grey: {
-                light: '#E7E9ED',
-                DEFAULT: '#d0d4dc',
-                dark: '#b9bfca',
-            },
+            ...colors,
         },
     },
     variants: {

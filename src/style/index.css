@@ -34,7 +34,7 @@ tr:hover input {
 }
 
 .button {
-    @apply font-bold uppercase px-8 py-2 transition-colors duration-150 border-4 rounded-full text-black bg-yellow border-white shadow;
+    @apply font-bold uppercase px-8 py-2 transition-colors duration-150 border-4 rounded-full text-white bg-yellow border-white shadow;
 }
 .button.positive {
     @apply text-white border-white bg-positive;

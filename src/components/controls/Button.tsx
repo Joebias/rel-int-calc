@@ -10,9 +10,22 @@ interface OwnProps {
     className?: string
 }
 
-const Button: FC<OwnProps> = ({ text, onClick, positive = false, negative = false, className = '' }) => {
+const Button: FC<OwnProps> = ({
+    text,
+    onClick,
+    positive = false,
+    negative = false,
+    className = '',
+}) => {
     return (
-        <button className={`button ${yeet(positive, 'positive')} ${yeet(negative, 'negative')}`} onClick={onClick}>
+        <button
+            className={`button ${yeet(positive, 'positive')} ${yeet(
+                negative,
+                'negative'
+            )} focus:outline-none`}
+            onClick={onClick}
+            type='button'
+        >
             {text}
         </button>
     )

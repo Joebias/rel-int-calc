@@ -1,2 +1,2 @@
-export const SITE_NAME = 'changeme'
-export const SITE_TITLE = 'CHANGE ME'
+export const SITE_NAME = 'RI Calculator'
+export const SITE_TITLE = 'RI Calculator'

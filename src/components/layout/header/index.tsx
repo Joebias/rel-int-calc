@@ -11,17 +11,6 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false)
     const toggleMenuOpen = () => setMenuOpen(!menuOpen)
 
-    const navLinks: NavItem[] = [
-        {
-            label: 'First Item',
-            path: '/nowhere',
-        },
-        {
-            label: 'Another Item',
-            path: '/nowhere',
-        },
-    ]
-
     return (
         <header className='bg-yellow border-b-8 border-yellow-dark shadow-xl'>
             <div className='p-4 flex flex-row justify-center'>
@@ -32,20 +21,16 @@ const Header = () => {
                             onClick={toggleMenuOpen}
                         />
                     </div>
-                    <NavMenu navLinks={navLinks} />
                 </nav>
-                <div className='site-title text-black text-xl sm:text-4xl tracking-widest mx-10 flex justify-center'>
+                <div className='site-title text-white text-xl sm:text-4xl tracking-widest mx-10 flex justify-center'>
                     <Link href='/'>
                         <a className='flex justify-center flex-col uppercase'>
                             <div>{SITE_TITLE}</div>
                         </a>
                     </Link>
                 </div>
-                <div className='right-nav self-center ml-auto flex flex-1 justify-center text-black font-bold uppercase'>
-                    <span className=''>Other</span>
-                </div>
+                <div className='right-nav self-center ml-auto flex flex-1 justify-center text-black font-bold uppercase'></div>
             </div>
-            <MobileNavMenu display={menuOpen} navlinks={navLinks} />
         </header>
     )
 }
