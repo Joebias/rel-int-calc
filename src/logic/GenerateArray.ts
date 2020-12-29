@@ -8,6 +8,7 @@ import RelativeIntensityPlanBlueprint, {
 type exerciseVariables = {
     reps: number
     weight: number
+    sets: number
 }
 
 function createNewPlanBlueprint(
@@ -32,6 +33,7 @@ export function genWeightsArray(maxWeight: number): exerciseVariables[] {
                 relativeIntensity: myBluePrint.startIntensity,
             })
             exercise.reps = myBluePrint.progression[j].reps
+            exercise.sets = myBluePrint.progression[j].sets
             exercises.push(exercise)
             myBluePrint.startIntensity -= myBluePrint.dropOff
         }

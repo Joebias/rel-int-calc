@@ -7,6 +7,7 @@ import { defaultPlanBlueprint } from '../logic/usecases/RelativeIntensityPlanBlu
 type exerciseVariables = {
     reps: number
     weight: number
+    sets: number
 }
 
 export default () => {
@@ -46,6 +47,7 @@ export default () => {
                             <div className='bg-white rounded-lg shadow-xl text-black w-35 h-15 text-center px-4 py-2'>
                                 <p>Weight: {Math.round(weight.weight / 100)}</p>
                                 <p>Reps: {weight.reps}</p>
+                                <p>Sets: {weight.sets}</p>
                             </div>
                         ))}
                     </div>
