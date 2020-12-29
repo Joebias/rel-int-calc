@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from './header'
 import Footer from './Footer'
 import { FC } from 'react'
+import { Helmet } from 'react-helmet'
 
 type PageProps = {
     title: string
@@ -24,6 +25,13 @@ const PageLayout: FC<PageProps> = ({
         >
             <Head>
                 <title>{title}</title>
+                <Helmet>
+                    <meta
+                        name='RI Program Generator'
+                        content='Free RI Program Generator'
+                    />
+                    <title>{title}</title>
+                </Helmet>
             </Head>
             <Header />
             <main className='mb-auto p-2 sm:p-8 w-full md:w-3/5 xl:w-1/2 sm:mx-auto text-white'>
