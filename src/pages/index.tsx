@@ -15,7 +15,7 @@ export default () => {
     const [maxWeight, setMaxWeight] = useState<number>()
     console.log(defaultPlanBlueprint.maxSessionPerPeriod)
     return (
-        <PageLayout title='RI Calculator'>
+        <PageLayout title='RI Program Generator'>
             <div>
                 <div className='flex justify-center uppercase h-auto'>
                     <label className='mr-3 h-small w-auto'>
@@ -33,7 +33,7 @@ export default () => {
                 </div>
                 <div className='mt-10 text-black left-nav self-center mr-auto flex flex-1 justify-center uppercase font-bold'>
                     <Button
-                        text='Calculate Program'
+                        text='Generate Program'
                         onClick={(event) =>
                             setWeights(genWeightsArray(maxWeight))
                         }
