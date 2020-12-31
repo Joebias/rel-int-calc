@@ -24,11 +24,11 @@ const PageLayout: FC<PageProps> = ({
             className={`page bg-background flex flex-col h-screen justify-between ${className} mountains-background mountains-background overflow-y-scroll overflow-x-hidden `}
         >
             <Helmet>
+                <title>{title}</title>
                 <meta
                     name='RI Program Generator'
                     content='Free RI Program Generator'
                 />
-                <title>{title}</title>
             </Helmet>
             <Header />
             <main className='mb-auto p-2 sm:p-8 w-full md:w-3/5 xl:w-1/2 sm:mx-auto text-white'>
