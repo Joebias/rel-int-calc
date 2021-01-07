@@ -25,7 +25,10 @@ const PageLayout: FC<PageProps> = ({
         >
             <Helmet>
                 <title>{title}</title>
-                <meta name='description' content='Free RI Program Generator' />
+                <meta
+                    name='description'
+                    content='Free Relative Intensity Program Generator'
+                />
             </Helmet>
             <Header />
             <main className='mb-auto p-2 sm:p-8 w-full md:w-3/5 xl:w-1/2 sm:mx-auto text-white'>
