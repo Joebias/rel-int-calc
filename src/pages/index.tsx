@@ -1,5 +1,5 @@
 import PageLayout from '../components/layout/PageLayout'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Button from '../components/controls/Button'
 import { genWeightsArray } from '../logic/GenerateArray'
 import { defaultPlanBlueprint } from '../logic/usecases/RelativeIntensityPlanBlueprint'
