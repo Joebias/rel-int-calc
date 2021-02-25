@@ -3,6 +3,9 @@ import React, { useState } from 'react'
 import Button from '../components/controls/Button'
 import { genWeightsArray } from '../logic/GenerateArray'
 import { defaultPlanBlueprint } from '../logic/usecases/RelativeIntensityPlanBlueprint'
+import ReactGA from 'react-ga'
+ReactGA.initialize('UA-163777811-1')
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 type exerciseVariables = {
     reps: number
