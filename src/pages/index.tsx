@@ -47,7 +47,7 @@ export default () => {
                 </div>
                 <div className='mt-10 text-white left-nav self-center mr-auto flex flex-1 justify-center uppercase font-bold '>
                     <div
-                        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4`}
+                        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4`}
                     >
                         {weights.map((weight) => (
                             <div className='bg-white rounded-lg shadow-xl text-black w-35 h-15 text-center px-4 py-2'>
