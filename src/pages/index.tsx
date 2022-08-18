@@ -19,7 +19,6 @@ type exerciseVariables = {
 export default () => {
     const [weights, setWeights] = useState<exerciseVariables[]>([])
     const [maxWeight, setMaxWeight] = useState<number>()
-    console.log(defaultPlanBlueprint.maxSessionPerPeriod)
     return (
         <PageLayout title='Relative Intensity Program Generator'>
             <div>
@@ -28,7 +27,7 @@ export default () => {
                         1 Rep Max (KG):
                     </label>
                     <input
-                        className='mr-3 text-black'
+                        className='mr-3 text-black text-center'
                         type='text'
                         name='1rm'
                         id='1rm'
@@ -47,14 +46,43 @@ export default () => {
                 </div>
                 <div className='mt-10 text-white left-nav self-center mr-auto flex flex-1 justify-center uppercase font-bold '>
                     <div
-                        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4`}
+                        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-4`}
                     >
-                        {weights.map((weight) => (
-                            <div className='bg-white rounded-lg shadow-xl text-black w-35 h-15 text-center px-4 py-2'>
-                                <p>Weight: {Math.round(weight.weight / 100)}</p>
-                                <p>Reps: {weight.reps}</p>
-                                <p>Sets: {weight.sets}</p>
-                            </div>
+                        {weights.map((weight, key) => (
+                            <>
+                                {key % 4 === 0 ? (
+                                    <div
+                                        className='col-span-2 grid grid-cols-2 gap-2 md:gap-4'
+                                        key='{key}'
+                                    >
+                                        <div className='text-white w-35 h-15  px-4 py-2 flex text-center'>
+                                            Week {key / 4 + 1}
+                                        </div>
+                                        <div className='bg-white rounded-lg shadow-xl text-black w-35 h-15 text-center px-4 py-2'>
+                                            <p>
+                                                Weight:{' '}
+                                                {Math.round(
+                                                    weight.weight / 100
+                                                )}
+                                            </p>
+                                            <p>Reps: {weight.reps}</p>
+                                            <p>Sets: {weight.sets}</p>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div
+                                        className='bg-white rounded-lg shadow-xl text-black w-35 h-15 text-center px-4 py-2'
+                                        key='{key}'
+                                    >
+                                        <p>
+                                            Weight:{' '}
+                                            {Math.round(weight.weight / 100)}
+                                        </p>
+                                        <p>Reps: {weight.reps}</p>
+                                        <p>Sets: {weight.sets}</p>
+                                    </div>
+                                )}
+                            </>
                         ))}
                     </div>
                 </div>
